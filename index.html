@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festejando a Conexão Campo-Cidade</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <h1>🌾 Festejando a Conexão Campo-Cidade 🏙️</h1>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#programacao">Programação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="acessibilidade container">
+    <button id="btn-contraste" aria-label="Ativar ou desativar alto contraste">🌓 Alto Contraste</button>
+  </div>
+
+  <main id="conteudo-principal" role="main">
+    <section class="hero" aria-label="Introdução com imagem e convite ao evento">
+      <div class="container">
+        <h2>Unindo Saberes e Culturas</h2>
+        <p>Venha celebrar a troca entre o campo e a cidade!</p>
+        <button onclick="participar()" aria-label="Clique para saber mais sobre como participar">Quero Participar</button>
+      </div>
+    </section>
+
+    <section id="sobre" class="section" aria-labelledby="titulo-sobre">
+      <div class="container">
+        <h2 id="titulo-sobre">Sobre o Evento</h2>
+        <p>
+          O "Festejando a Conexão Campo-Cidade" é um festival cultural que une produtores rurais, artistas urbanos e comunidades locais para celebrar a diversidade, a alimentação saudável, a música e a sustentabilidade.
+        </p>
+      </div>
+    </section>
+
+    <section id="programacao" class="section destaque" aria-labelledby="titulo-programacao">
+      <div class="container">
+        <h2 id="titulo-programacao">Programação</h2>
+        <ul>
+          <li><strong>10h:</strong> Abertura com roda de conversa</li>
+          <li><strong>12h:</strong> Almoço agroecológico coletivo</li>
+          <li><strong>14h:</strong> Oficinas práticas (horta, compostagem)</li>
+          <li><strong>16h:</strong> Música e apresentações culturais</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="video" class="section" aria-labelledby="titulo-video">
+      <div class="container">
+        <h2 id="titulo-video">Conheça o Evento</h2>
+        <video controls width="100%" aria-label="Vídeo institucional com legendas">
+          <source src="assets/video/festival.mp4" type="video/mp4">
+          <track src="assets/video/legenda.vtt" kind="subtitles" srclang="pt" label="Português" default>
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </section>
+
+    <section id="contato" class="section" aria-labelledby="titulo-contato">
+      <div class="container">
+        <h2 id="titulo-contato">Fale Conosco</h2>
+        <form id="formContato" aria-label="Formulário de contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required aria-required="true" aria-label="Digite seu nome completo">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required aria-required="true" aria-label="Digite seu e-mail">
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required aria-required="true" aria-label="Digite sua mensagem"></textarea>
+
+          <button type="submit" aria-label="Enviar mensagem de contato">Enviar</button>
+        </form>
+        <p id="msgEnviada" class="mensagem-sucesso" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Festejando Campo-Cidade. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Ação do botão "Quero Participar"
+    function participar() {
+      alert("Inscrições abertas em breve! Acompanhe nossas redes.");
+    }
+
+    // Modo alto contraste
+    document.getElementById("btn-contraste").addEventListener("click", function () {
+      document.body.classList.toggle("contraste");
+    });
+
+    // Formulário
+    document.getElementById("formContato").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("msgEnviada").innerText = "Mensagem enviada com sucesso!";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
