@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #000000;
   color: #333;
   line-height: 1.6;
 }
@@ -16,13 +16,21 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: auto;
+  text-align: center;
+}
+.container img{
+  max-width: 500px;
+}
+
+.banner{
+  margin: 0;
+  padding: 0;
 }
 
 /* Header */
 header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 1.5rem 0;
+  background-color: #0b3d0d;
+  color: rgb(238, 237, 237);
   text-align: center;
   position: sticky;
   top: 0;
@@ -38,7 +46,7 @@ header nav ul {
 }
 
 header nav a {
-  color: white;
+  color: rgb(245, 243, 243);
   text-decoration: none;
   font-weight: bold;
 }
@@ -57,7 +65,7 @@ header nav a:hover {
 #btn-contraste {
   padding: 0.5rem 1rem;
   background-color: #555;
-  color: white;
+  color: rgb(247, 247, 247);
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -71,7 +79,7 @@ header nav a:hover {
 /* Modo alto contraste */
 body.contraste {
   background-color: #000 !important;
-  color: #fff !important;
+  color: #e6e6e6 !important;
 }
 
 body.contraste header,
@@ -79,7 +87,7 @@ body.contraste footer,
 body.contraste .section,
 body.contraste .hero {
   background-color: #000 !important;
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 body.contraste input,
@@ -89,11 +97,18 @@ body.contraste button {
   color: #fff !important;
   border: 1px solid #fff !important;
 }
+.row{
+  text-align:center;
+}
+
+.card{
+  text-align:center;
+}
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x600/?farm,city') center/cover no-repeat;
-  color: white;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://uploads-planetacampo.canalrural.com.br/sites/9/2025/02/pexels-photo-461960.jpeg') center/cover no-repeat;
+  color: rgb(231, 226, 226);
   text-align: center;
   padding: 5rem 1rem;
 }
@@ -118,6 +133,7 @@ body.contraste button {
   background-color: #fb8c00;
 }
 
+
 /* Seções */
 .section {
   padding: 3rem 1rem;
@@ -132,7 +148,71 @@ body.contraste button {
 
 .section h2 {
   margin-bottom: 1rem;
-  color: #4CAF50;
+  color: #031f04;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1;
+  padding: 1;
+  background-color: #d18e41;
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  background-color: #58852673;
+  padding: 30px 40px;
+  box-shadow: 0 2px 10px rgba(151, 5, 5, 0.322);
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 40px;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+  padding: 12px;
+  font-size: 17px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+  min-width: 180px;
+  flex: 1 1 70px;
+}
+
+.search-form button {
+  background-color: #007BFF;
+  color: rgb(216, 42, 42);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form input,
+  .search-form select,
+  .search-form button {
+    width: 100%;
+  }
 }
 
 ul li {
@@ -154,10 +234,15 @@ input, textarea {
 }
 
 button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #104212;
+  color: rgb(247, 247, 247);
   border: none;
   padding: 0.8rem;
   cursor: pointer;
   font-weight: bold;
-  border-radius: 5
+  border-radius: 5;
+}
+
+
+
+
